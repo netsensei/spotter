@@ -1,0 +1,23 @@
+{
+  "name": "spotter",
+  "version": "0.1.0",
+  "description": "Async check the HTTP status of a CSV formatted list of URLs",
+  "main": "./lib/head.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "spotter": "bin/spotter.js"
+  },
+  "author": "Matthias Vandermaesen",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.4.0",
+    "bluebird": "^2.9.34",
+    "commander": "^2.8.1",
+    "fast-csv": "^0.6.0",
+    "pace": "0.0.4",
+    "request-promise": "^0.4.3",
+    "underscore": "^1.8.3"
+  }
+}
