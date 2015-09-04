@@ -8,8 +8,8 @@ You have a list of URL's and you want to check how HTTP requests are
 handled by the HTTP server? Spotter will asynchronously send HTTP HEAD requests
 and list the returned HTTP response statuscode for each URL.
 
-This project relies on [request-promise](https://www.npmjs.com/package/request-promise)
-and [bluebird](https://www.npmjs.com/package/bluebird).
+This project relies on [request-promise](https://www.npmjs.com/package/request-promise),
+[lodash](https://www.npmjs.com/package/lodash) and [bluebird](https://www.npmjs.com/package/bluebird).
 
 Status: Currently under development.
 
@@ -37,13 +37,24 @@ code.
 
 Use spotter in your own code like this:
 
-```
+```javascript
 var spotter = require('spotter');
+var options = { pace: false }
+var column = "url";
 
-spotter(data, column).then(function(result) {
+var data = [
+  { title: "CNN", url: http://cnn.com },
+  { title: "NY Times", url: http://nytimes.com }
+]
+
+spotter(data, column, options).then(function(result) {
   // do stuff
 }
 ```
+
+This method accepts the following `options`
+
+* `pace`: set to true or false. Display the [pace](https://www.npmjs.com/package/pace) progress bar.
 
 ## License
 
