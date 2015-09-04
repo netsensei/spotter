@@ -4,7 +4,7 @@ Fetch the HTTP response codes for a CSV formatted list of URL's.
 
 ## Background
 
-You have a list of URL's and you want to check how HTTP requests are
+You have a list of URLs and you want to check how HTTP requests are
 handled by the HTTP server? Spotter will asynchronously send HTTP HEAD requests
 and list the returned HTTP response statuscode for each URL.
 
@@ -43,8 +43,8 @@ var options = { pace: false }
 var column = "url";
 
 var data = [
-  { title: "CNN", url: http://cnn.com },
-  { title: "NY Times", url: http://nytimes.com }
+  { title: "CNN", url: "http://cnn.com" },
+  { title: "NY Times", url: "http://nytimes.com" }
 ]
 
 spotter(data, column, options).then(function(result) {
