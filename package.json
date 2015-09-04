@@ -9,6 +9,13 @@
   "bin": {
     "spotter": "bin/spotter.js"
   },
+  "keywords": [
+    "csv",
+    "http",
+    "request",
+    "response",
+    "async"
+  ],
   "author": "Matthias Vandermaesen",
   "license": "MIT",
   "dependencies": {
@@ -19,5 +26,8 @@
     "pace": "0.0.4",
     "request-promise": "^0.4.3",
     "underscore": "^1.8.3"
+  },
+  "bugs": {
+    "url": "https://github.com/netsensei/spotter/issues"
   }
 }
