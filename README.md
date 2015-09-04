@@ -1,11 +1,11 @@
 # Spotter
 
-Fetch the HTTP status code of a list of URL's.
+Fetch the HTTP response codes for a CSV formatted list of URL's.
 
 ## Background
 
-You have a list of URL's and you want to check how HTTP requests to them are
-handled by the webserver? Spotter will asynchronously send HTTP HEAD requests
+You have a list of URL's and you want to check how HTTP requests are
+handled by the HTTP server? Spotter will asynchronously send HTTP HEAD requests
 and list the returned HTTP response statuscode for each URL.
 
 This project relies on [request-promise](https://www.npmjs.com/package/request-promise)
