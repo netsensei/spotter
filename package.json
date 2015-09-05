@@ -1,8 +1,8 @@
 {
   "name": "spotter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Async check the HTTP status of a CSV formatted list of URLs",
-  "main": "./lib/head.js",
+  "main": "./lib/spotter.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
