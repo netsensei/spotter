@@ -44,7 +44,11 @@ Use spotter in your own code like this:
 
 ```javascript
 var spotter = require('spotter');
-var options = { pace: false }
+var options = {
+  pace: false,
+  followRedirect: true,
+  maxRedirects: 3
+}
 var column = "url";
 
 var data = [
@@ -59,7 +63,21 @@ spotter(data, column, options).then(function(result) {
 
 This method accepts the following `options`
 
-* `pace`: set to true or false. Display the [pace](https://www.npmjs.com/package/pace) progress bar.
+* `pace`: set to true or false. Display the [pace](https://www.npmjs.com/package/pace) progress bar (default: false).
+* `followRedirect`: set to true or false. Follow HTTP 3xx responses as redirects (default: true)
+* `maxRedirects`: the maximum number of redirects to follow (default: 3)
+
+## FAQ
+
+Q: Spotter throws this error:
+
+`(node) warning: possible EventEmitter memory leak detected. 11 listeners added. Use emitter.setMaxListeners() to increase limit.`
+
+A: The [request](https://github.com/request/request) library has created too many event listeners which are still active or haven't been cleaned up by Node. See: [this issue](https://github.com/request/request/issues/311) for an detailled explanation.
+
+Q: How many redirects does Spotter follow?
+
+By default, Spotter follows 3 redirects (3xx codes).
 
 ## License
 
