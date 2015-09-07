@@ -19,7 +19,7 @@ Status: Currently under development.
 
 You can install spotter locally via `$ npm install spotter` or as a global package via `$sudo npm install -g spotter`.
 
-Or
+Or just clone this repository:
 
 ```bash
 $ git clone https://github.com/netsensei/spotter.git
